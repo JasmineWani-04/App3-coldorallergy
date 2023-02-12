@@ -44,8 +44,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- assigning allergy count to the value of allergy_count function so I can print it -->
 	<!-- assigning coldcount to the value of cold_count function so I can print it -->
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+var allergy_count = 0;
+var cold_count = 0;
 	
 var  cold_percentage = 0;
 var  allergy_percentage = 0;
@@ -186,10 +186,14 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 
 <!-- Here I will print my results-->
 		 <p id="results">
+			 
+   <h1>Probability it is allergies = <span id="coldcount"></span></h1>
+  <h1>Probability it is a cold = <span id="allergycount"></span></h1>
+
+  <h1> Allergy Percentage = <span id="allergypercentage"></span> %</h1>
+  <h1> Cold Percentage = <span id="coldpercentage"></span> % </h1>
 		
-    <h1> Probability it is allergies = <span id="allergypercentage"></span>%</h1>
-  <h1> Probability it is a cold = <span id="coldpercentage"></span>%</h1>
-		</p>. 
+		</p>
 	</div>
 </div>	
 
