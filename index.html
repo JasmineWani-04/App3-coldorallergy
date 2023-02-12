@@ -43,21 +43,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- When allergyadd or coldadd is called upon then we add 1 to the existing count. -->
 <!-- assigning allergy count to the value of allergy_count function so I can print it -->
 	<!-- assigning coldcount to the value of cold_count function so I can print it -->
+
 <script>
-var allergy_count = 0;
-var cold_count = 0;
-	
-var  cold_percentage = 0;
-var  allergy_percentage = 0;
+ var allergy_count = 0;
+  var cold_count = 0;
 
-	
-function allergyAdd(){allergy_count = allergy_count + 1;document.getElementById("allergycount").innerHTML = allergy_count;}	
-function coldAdd(){cold_count = cold_count + 1; document.getElementById("coldcount").innerHTML = cold_count;}
-
+  var  cold_percentage = 0;
+  var  allergy_percentage = 0;
+  
 function coldPercentagefunction(){cold_percentage = (cold_count/4)*100;document.getElementById("coldpercentage").innerHTML = cold_percentage;}
-function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
+ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
 
 
+
+function allergyAdd(){ allergy_count = allergy_count + 1; document.getElementById("allergycount").innerHTML = allergy_count;}
+function coldAdd(){ cold_count = cold_count + 1; document.getElementById("coldcount").innerHTML = cold_count;}
 
   </script>
 
@@ -92,15 +92,6 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-	
-	
-	
-	
-	
-	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 	<!-- Here I am asking the first question -->
@@ -112,7 +103,7 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 		
 		<p>
 <!-- Here I am calling the allergyadd allergy add when Yes is selected -->
-	<a href="#two" class="w3-btn w3-purple" onclick="allergyAdd()"> Yes </a>
+	<a href="#two" class="w3-btn w3-black" onclick="allergyAdd()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
 	<a href="#two" class="w3-btn w3-black" onclick="coldAdd()"> No </a>
 		</p>    
@@ -132,7 +123,7 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 	<div id="content" class="w3-container">
 		<p>	
 <!-- Here I am calling the coldAdd allergy add when Yes is selected -->
-	<a href="#three" class="w3-btn w3-purple" onclick="coldAdd()"> Yes </a>
+	<a href="#three" class="w3-btn w3-black" onclick="coldAdd()"> Yes </a>
  <!-- Here I am calling the function Allergyadd add when No is selected -->
 	<a href="#three" class="w3-btn w3-black" onclick="allergyAdd()"> No </a>
 		</p>
@@ -150,7 +141,7 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 	<div id="content" class="w3-container">
 		<p>
 	<!-- Here I am calling the coldAdd allergy add when Yes is selected -->
-	<a href="#four" class="w3-btn w3-purple" onclick="coldAdd()"> Yes </a>
+	<a href="#four" class="w3-btn w3-black" onclick="coldAdd()"> Yes </a>
  <!-- Here I am calling the function Allergyadd add when No is selected -->
 	<a href="#four" class="w3-btn w3-black" onclick="allergyAdd()"> No </a>
 		</p>
@@ -168,7 +159,7 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 	<div id="content" class="w3-container">
 		<p>
 <!-- Here I am calling the allergyadd allergy add when Yes is selected -->
-	<a href="#five" class="w3-btn w3-purple" onclick="allergyAdd(); coldPercentagefunction();allergyPercentagefunction()"> Yes </a>
+	<a href="#five" class="w3-btn w3-black" onclick="allergyAdd(); coldPercentagefunction();allergyPercentagefunction()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
 	<a href="#five" class="w3-btn w3-black" onclick="coldAdd(); coldPercentagefunction();allergyPercentagefunction()"> No </a>
 		</p>
@@ -186,16 +177,18 @@ function allergyPercentagefunction(){allergy_percentage = (allergy_count/4)*100;
 
 <!-- Here I will print my results-->
 		 <p id="results">
-			 
+		
   <h1>Probability it is allergies = <span id="coldcount"></span></h1>
   <h1>Probability it is a cold = <span id="allergycount"></span></h1>
-
+  
   <h1> Allergy Percentage = <span id="allergypercentage"></span> %</h1>
   <h1> Cold Percentage = <span id="coldpercentage"></span> % </h1>
-		
+
+
 		</p>
 	</div>
 </div>	
+
 
 	
 	
