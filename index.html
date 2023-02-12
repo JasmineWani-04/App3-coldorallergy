@@ -46,8 +46,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- assigning coldcount to the value of cold_count function so I can print it -->
 	
 	
-<!-- assigning allergypercentage to the value of allergy_percentage function so I can print it I am just doing the value/6 times 100 -->
-<!-- assigning allergypercentage to the value of cold_percentage function so I can print it. I am just doing the value/6 times 100 -->
+<!-- assigning allergypercentage to the value of allergy_percentage function so I can print it I am just doing the allergy_count/7 times 100 -->
+<!-- assigning allergypercentage to the value of cold_percentage function so I can print it. I am just doing the cold_count/7 times 100 -->
 	
 
 <script>
@@ -62,8 +62,8 @@ function allergyAdd(){ allergy_count = allergy_count + 1; document.getElementByI
 function coldAdd(){ cold_count = cold_count + 1; document.getElementById("coldcount").innerHTML = cold_count;}
 
  
-function coldPercentagefunction(){cold_percentage = (cold_count/6)*100;document.getElementById("coldpercentage").innerHTML = cold_percentage;}
- function allergyPercentagefunction(){allergy_percentage = (allergy_count/6)*100;document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
+function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.getElementById("coldpercentage").innerHTML = cold_percentage;}
+ function allergyPercentagefunction(){allergy_percentage = (allergy_count/7)*100;document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
 
 
 
