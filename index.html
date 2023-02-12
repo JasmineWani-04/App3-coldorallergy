@@ -39,29 +39,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
-<script>
 	<!-- Here we have assigned two variables to count the score for either allergy or code we start the count at 0  -->
-
+<!-- When allergyadd or coldadd is called upon then we add 1 to the existing count. -->
+<!-- assigning allergy count to the value of allergy_count function so I can print it -->
+	<!-- assigning coldcount to the value of cold_count function so I can print it -->
+<script>
         var allergy_count = 0;
         var cold_count = 0;
-	
-<!-- When allergyadd or coldadd is called upon then we add 1 to the existing count. -->
-
 
         function allergyAdd(){
         allergy_count = allergy_count + 1;
-<!-- Not sure if I need an alert in my function -->
-<!-- 		alert(allergy_count);           -->
-<!-- assigning allergy count to the value of allergy_count function so I can print it -->
 document.getElementById("allergycount").innerHTML = allergy_count;
 alert(allergy_count);
         }
-
+	
         function coldAdd(){
             cold_count = cold_count + 1;
-
-<!-- assigning coldcount to the value of cold_count function so I can print it -->
 document.getElementById("coldcount").innerHTML = cold_count;
 alert(cold_count);
         }
@@ -112,9 +105,9 @@ alert(cold_count);
         <!-- Here I am adding 2 buttons for Yes and No for the question-->
 		<p>
 <!-- Here I am calling the coldAdd allergy add when Yes is selected -->
-	<a href="#two" class="w3-btn w3-black" onclick="function coldAdd()"> Yes </a>
+	<a href="#two" class="w3-btn w3-black" onclick="coldAdd()"> Yes </a>
  <!-- Here I am calling the function allergy add when No is selected -->
-	<a href="#two" class="w3-btn w3-black" onclick="function allergyAdd()"> No </a>
+	<a href="#two" class="w3-btn w3-black" onclick="allergyAdd()"> No </a>
 		</p>    
 
 	
