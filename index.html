@@ -63,8 +63,8 @@ function allergyAdd(){ allergy_count = allergy_count + 1; document.getElementByI
 function coldAdd(){ cold_count = cold_count + 1; document.getElementById("coldcount").innerHTML = cold_count;}
 
  
-function coldPercentagefunction(){cold_percentage = Math.round((cold_count/6)*100);document.getElementById("coldpercentage").innerHTML = cold_percentage;}
- function allergyPercentagefunction(){allergy_percentage = Math.round((allergy_count/6)*100);document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
+function coldPercentagefunction(){cold_percentage = Math.round((cold_count/4)*100);document.getElementById("coldpercentage").innerHTML = cold_percentage;}
+ function allergyPercentagefunction(){allergy_percentage = Math.round((allergy_count/4)*100);document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
 
 
 
@@ -175,12 +175,12 @@ function coldPercentagefunction(){cold_percentage = Math.round((cold_count/6)*10
   <div id="content" class="w3-container">
     <p>
 <!-- Here I am calling the function allergyadd  when Yes is selected -->
-  <a href="#five" class="w3-button w3-block w3-black" style="width:80%"  onclick="allergyAdd()"> Yes </a>
+  <a href="#seven" class="w3-button w3-block w3-black" style="width:80%"  onclick="allergyAdd()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
  <!-- I am also looading the coldpercentagefunction and allergy percentage function to both buttons so that this triggers the calculation of percentages
  -->
 
-  <a href="#five" class="w3-button w3-block w3-black" style="width:80%" onclick="coldAdd()"> No </a>
+  <a href="#seven" class="w3-button w3-block w3-black" style="width:80%" onclick="coldAdd()"> No </a>
     </p>
   </div>
 </div>  
@@ -188,6 +188,14 @@ function coldPercentagefunction(){cold_percentage = Math.round((cold_count/6)*10
 	
 </div>  
 		
+	
+	
+	
+	
+	
+	
+<!-- Alternate questions
+
 <!-- assigning page 5 as my allergy question-->
 
 <div class="page" id="five">
@@ -198,10 +206,13 @@ function coldPercentagefunction(){cold_percentage = Math.round((cold_count/6)*10
 <!-- Here I am adding 2 buttons for Yes and No for the question-->
   <div id"content" class="w3-container">
     <p>
+	   
+ <!-- I am also loading the coldpercentagefunction and allergy percentage function to both buttons so that this triggers the calculation of percentages
+
 <!-- Here I am calling the function allergyadd  when Yes is selected -->
-  <a href="#six" class="w3-button w3-block w3-black" style="width:80%"  onclick="allergyAdd()"> Yes </a>
+  <a href="#six" class="w3-button w3-block w3-black" style="width:80%"  onclick="allergyAdd(); coldPercentagefunction();allergyPercentagefunction()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
-  <a href="#six" class="w3-button w3-block w3-black" style="width:80%" onclick="coldAdd()"> No </a>
+  <a href="#six" class="w3-button w3-block w3-black" style="width:80%" onclick="coldAdd(); coldPercentagefunction();allergyPercentagefunction()"> No </a>
     </p>
   </div>
 </div>  
@@ -221,17 +232,16 @@ function coldPercentagefunction(){cold_percentage = Math.round((cold_count/6)*10
 <!-- Here I am calling the function allergyadd  when Yes is selected -->
   <a href="#seven" class="w3-button w3-block w3-black" onclick="coldAdd(); coldPercentagefunction();allergyPercentagefunction()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
- <!-- I am also looading the coldpercentagefunction and allergy percentage function to both buttons so that this triggers the calculation of percentages
+ <!-- I am also loading the coldpercentagefunction and allergy percentage function to both buttons so that this triggers the calculation of percentages
  -->
   <a href="#seven" class="w3-button w3-block w3-black" onclick="AllergyAdd(); coldPercentagefunction();allergyPercentagefunction()"> No </a>
     </p>
   </div>
 </div>  
-
+-->	
 	
 	
 <!-- assigning page 7 as results-->
-
   
 <div class="page" id="seven">
 <!-- Here I am creating a page for results-->
