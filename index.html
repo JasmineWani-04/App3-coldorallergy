@@ -48,11 +48,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <!-- assigning allergypercentage to the value of allergy_percentage function so I can print it I am just doing the allergy_count/7 times 100 -->
 <!-- assigning allergypercentage to the value of cold_percentage function so I can print it. I am just doing the cold_count/7 times 100 -->
-	
-
+<!-- Math.round will round my percentage -->
+<!-- document.getElementById will let me refer to the variable later on in the code-->
 <script>
+	
  var allergy_count = 0;
-  var cold_count = 0;
+ var cold_count = 0;
 
   var  cold_percentage = 0;
   var  allergy_percentage = 0;
@@ -62,8 +63,8 @@ function allergyAdd(){ allergy_count = allergy_count + 1; document.getElementByI
 function coldAdd(){ cold_count = cold_count + 1; document.getElementById("coldcount").innerHTML = cold_count;}
 
  
-function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.getElementById("coldpercentage").innerHTML = cold_percentage;}
- function allergyPercentagefunction(){allergy_percentage = (allergy_count/7)*100;document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
+function coldPercentagefunction(){cold_percentage = Math.round((cold_count/6)*100);document.getElementById("coldpercentage").innerHTML = cold_percentage;}
+ function allergyPercentagefunction(){allergy_percentage = Math.round((allergy_count/6)*100);document.getElementById("allergypercentage").innerHTML = allergy_percentage;} 
 
 
 
@@ -114,7 +115,7 @@ function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.
       <div id="content" class="w3-container">    
     <p>
 <!-- Here I am calling the allergyadd allergy add when Yes is selected -->
-  <a href="#two" class="w3-btn w3-black" onclick="allergyAdd()"> Yes </a>
+  <a href="#two" class="w3-button w3-block w3-red" style="width:80%" onclick="allergyAdd()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
   <a href="#two" class="w3-btn w3-black" onclick="coldAdd()"> No </a>
     </p>    
@@ -185,27 +186,11 @@ function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.
 </div>  
 	
 	
-<!-- assigning page 5 -->
-
-<div class="page" id="five">
-<!-- Here I am asking the last question you assigned -->
-  <div class="w3-container w3-flat-carrot">
-    <h1>Are your symptoms seasonal or chronic?</h1>
-  </div>
-<!-- Here I am adding 2 buttons for Yes and No for the question-->
-  <div id="content" class="w3-container">
-    <p>
-<!-- Here I am calling the function allergyadd  when Yes is selected -->
-  <a href="#six" class="w3-btn w3-black" onclick="allergyAdd()"> Yes </a>
- <!-- Here I am calling the function coldadd add when No is selected -->
-  <a href="#six" class="w3-btn w3-black" onclick="coldAdd()"> No </a>
-    </p>
-  </div>
 </div>  
 		
-<!-- assigning page 6 as my allergy question-->
+<!-- assigning page 5 as my allergy question-->
 
-<div class="page" id="six">
+<div class="page" id="five">
 <!-- Here I am asking my first allergy question-->
   <div class="w3-container w3-flat-carrot">
     <h1>Do you have shortness of breath?</h1>
@@ -214,18 +199,19 @@ function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.
   <div id"content" class="w3-container">
     <p>
 <!-- Here I am calling the function allergyadd  when Yes is selected -->
-  <a href="#seven" class="w3-btn w3-purple" onclick="allergyAdd()"> Yes </a>
+  <a href="#six" class="w3-btn w3-purple" onclick="allergyAdd()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
-  <a href="#seven" class="w3-btn w3-purple" onclick="coldAdd()"> No </a>
+  <a href="#six" class="w3-btn w3-purple" onclick="coldAdd()"> No </a>
     </p>
   </div>
 </div>  
 
 
 
-	
-<div class="page" id="seven">
+	<!-- assigning page 6 as my cold question-->
 <!-- Here I am asking my first cold question-->
+
+<div class="page" id="six">
   <div class="w3-container w3-flat-carrot">
     <h1>Are you feeling general body aches/pains?</h1>
   </div>
@@ -233,21 +219,21 @@ function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.
   <div id="content" class="w3-container">
     <p>
 <!-- Here I am calling the function allergyadd  when Yes is selected -->
-  <a href="#eight" class="w3-btn w3-purple" onclick="coldAdd(); coldPercentagefunction();allergyPercentagefunction()"> Yes </a>
+  <a href="#seven" class="w3-btn w3-purple" onclick="coldAdd(); coldPercentagefunction();allergyPercentagefunction()"> Yes </a>
  <!-- Here I am calling the function coldadd add when No is selected -->
  <!-- I am also looading the coldpercentagefunction and allergy percentage function to both buttons so that this triggers the calculation of percentages
  -->
-  <a href="#eight" class="w3-btn w3-purple" onclick="AllergyAdd(); coldPercentagefunction();allergyPercentagefunction()"> No </a>
+  <a href="#seven" class="w3-btn w3-purple" onclick="AllergyAdd(); coldPercentagefunction();allergyPercentagefunction()"> No </a>
     </p>
   </div>
 </div>  
 
 	
 	
-<!-- assigning page 8 as results-->
+<!-- assigning page 7 as results-->
 
   
-<div class="page" id="eight">
+<div class="page" id="seven">
 <!-- Here I am creating a page for results-->
   <div class="w3-container w3-flat-carrot">
     <h1>Results</h1>
@@ -272,7 +258,7 @@ function coldPercentagefunction(){cold_percentage = (cold_count/7)*100;document.
   
   
 <footer class="w3-bottom w3-container w3-flat-carrot">
-  <p>DIY!</p>
+  <p>___________________FOOTER INFO___________________</p>
 </footer>
 
 </body>
