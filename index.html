@@ -55,7 +55,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- 		alert(allergy_count);           -->
 <!-- assigning allergy count to the value of allergy_count function so I can print it -->
 document.getElementById("allergycount").innerHTML = allergy_count;
-
+alert(allergy_count);
         }
 
         function coldAdd(){
@@ -63,7 +63,7 @@ document.getElementById("allergycount").innerHTML = allergy_count;
 
 <!-- assigning coldcount to the value of cold_count function so I can print it -->
 document.getElementById("coldcount").innerHTML = cold_count;
-
+alert(cold_count);
         }
 
   </script>
@@ -177,12 +177,12 @@ document.getElementById("coldcount").innerHTML = cold_count;
 	</div>
 
 	<div id="content" class="w3-container">
-	
+
 <!-- Here I will print my results-->
 		 <p id="results">
 		
   <h1>"Probability it is allergies =" <span id="coldcount"></span></h1>
-  <h1>"Probability it is allergies =" <span id="allergycount"></span></h1>
+  <h1>"Probability it is a cold =" <span id="allergycount"></span></h1>
 
 		</p>. 
 	</div>
